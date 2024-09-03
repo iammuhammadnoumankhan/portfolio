@@ -1550,3 +1550,41 @@ img{
     }
 }
 
+@media (max-width: 768px) {
+    .filter__container {
+        flex-direction: column; /* Stack filter buttons vertically on small screens */
+        align-items: center;
+    }
+
+    .filter__button {
+        width: 100%; /* Make each button take up the full width */
+        margin-bottom: 0.5rem;
+    }
+
+    .projects__container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+
+    .projects__content {
+        padding: 1rem; /* Reduce padding for better spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects__container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for mobile screens */
+    }
+
+    .projects__title {
+        font-size: 1rem; /* Adjust title size for mobile */
+    }
+
+    .projects__description {
+        font-size: 0.875rem; /* Adjust description size for mobile */
+    }
+
+    .projects__button {
+        padding: 0.5rem; /* Adjust button padding for mobile */
+    }
+}
+

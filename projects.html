@@ -10,6 +10,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
+            padding: 0 1rem; /* Add padding for better spacing on smaller screens */
         }
 
         .projects__content {
@@ -62,21 +63,26 @@
         .filter__container {
             display: flex;
             justify-content: center;
-            margin-bottom: -5rem;
+            flex-wrap: wrap; /* Allow buttons to wrap to a new line */
+            gap: 0.5rem; /* Add some spacing between the buttons */
+            margin-bottom: 2rem;
+            padding: 0 1rem; /* Add padding to create space on smaller screens */
         }
 
         .filter__button {
             background-color: #007bff;
             color: #fff;
             padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
             border: none;
             border-radius: 0.5rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            flex: 1 1 150px; /* Make buttons responsive and take up equal space */
+            text-align: center;
         }
 
-        .filter__button.active, .filter__button:hover {
+        .filter__button.active,
+        .filter__button:hover {
             background-color: #0056b3;
         }
     </style>
