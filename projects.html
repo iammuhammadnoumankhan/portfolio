@@ -10,7 +10,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            padding: 0 1rem; /* Add padding for better spacing on smaller screens */
         }
 
         .projects__content {
@@ -63,44 +62,39 @@
         .filter__container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Allow buttons to wrap to a new line */
-            gap: 0.5rem; /* Add some spacing between the buttons */
-            margin-bottom: 2rem;
-            padding: 0 1rem; /* Add padding to create space on smaller screens */
+            margin-bottom: -3rem;
         }
 
-        .filter__button {
-            background-color: #007bff;
-            color: #fff;
+        .filter__dropdown {
             padding: 0.5rem 1rem;
-            border: none;
+            font-size: 1rem;
+            border: 1px solid #ddd;
             border-radius: 0.5rem;
+            background-color: #f8f8f8;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            flex: 1 1 150px; /* Make buttons responsive and take up equal space */
-            text-align: center;
+            transition: border-color 0.3s ease;
         }
 
-        .filter__button.active,
-        .filter__button:hover {
-            background-color: #0056b3;
+        .filter__dropdown:focus {
+            border-color: #007bff;
         }
     </style>
 </head>
 <body>
     <!--==================== FILTER ====================-->
     <section class="filter section">
-        <h2 class="section__title">Filter Blogs</h2>
+        <h2 class="section__title">Filter Projects</h2>
         <div class="filter__container">
-            <button class="filter__button active" data-filter="all">All</button>
-            <button class="filter__button" data-filter="AI">AI</button>
-            <button class="filter__button" data-filter="CV">Computer Vision</button>
-            <button class="filter__button" data-filter="NLP">NLP</button>
-            <button class="filter__button" data-filter="RAG">RAGs</button>
-            <button class="filter__button" data-filter="Agent">AI Agents</button>
-            <button class="filter__button" data-filter="Scraper">Scrapers</button>
-            
-            <!-- Add more filter buttons as needed -->
+            <select class="filter__dropdown" id="projectFilter">
+                <option value="all">All</option>
+                <option value="AI">AI</option>
+                <option value="CV">Computer Vision</option>
+                <option value="NLP">NLP</option>
+                <option value="RAG">RAGs</option>
+                <option value="Agent">AI Agents</option>
+                <option value="Scraper">Scrapers</option>
+                <!-- Add more options as needed -->
+            </select>
         </div>
     </section>
 
@@ -109,9 +103,9 @@
         <h2 class="section__title">All Projects</h2>
         <span class="section__subtitle">Explore My Work</span>
 
-        <div class="projects__container container grid">
+        <div class="projects__container container grid" id="projectsContainer">
             <!-- Project 1 -->
-            <div class="projects__content" data-category="AI">
+            <div class="projects__content" data-tags="RAG">
                 <img src="assets/img/Portfolio/portfolio8.jpg" alt="" class="projects__img">
                 <h3 class="projects__title">Food AI</h3>
                 <p class="projects__description">Cross-Modal Representation Learning</p>
@@ -121,7 +115,7 @@
                 </a>
             </div>
             <!-- Project 2 -->
-            <div class="projects__content" data-category="CV">
+            <div class="projects__content" data-tags="AI">
                 <img src="assets/img/Portfolio/portfolio4.JPG" alt="" class="projects__img">
                 <h3 class="projects__title">Reminder - Todo List</h3>
                 <p class="projects__description">Android Development</p>
@@ -134,6 +128,23 @@
         </div>
     </section>
 
+    <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript to filter projects based on dropdown selection
+        document.getElementById('projectFilter').addEventListener('change', function () {
+            const filterValue = this.value.toLowerCase();
+            const projects = document.querySelectorAll('.projects__content');
+
+            projects.forEach(project => {
+                const projectTags = project.getAttribute('data-tags').toLowerCase();
+                if (filterValue === 'all' || projectTags.includes(filterValue)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    </script>
     <script src="assets/js/filter.js"></script>
 </body>
 </html>
