@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        .blog__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .blog__content {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog__content:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog__img {
+
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog__title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog__description {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog__button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog__button:hover {
+            background-color: #0056b3;
+        }
+
+        .blog__icon {
+            margin-left: 0.5rem;
+        }
+
+        .filter__container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -5rem;
+        }
+
+        .filter__button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter__button.active, .filter__button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+</head>
+<body>
+    <!--==================== FILTER ====================-->
+    <section class="filter section">
+        <h4 class="section__title">Filter Projects</h4>
+        <div class="filter__container">
+            <button class="filter__button active" data-filter="all">All</button>
+            <button class="filter__button" data-filter="AI">AI</button>
+            <button class="filter__button" data-filter="CV">Computer Vision</button>
+            <button class="filter__button" data-filter="NLP">NLP</button>
+            <button class="filter__button" data-filter="RAG">RAGs</button>
+            <button class="filter__button" data-filter="Agent">AI Agents</button>
+            <button class="filter__button" data-filter="Transformers">Scrapers</button>
+            <button class="filter__button" data-filter="Data">Data</button>
+            
+            <!-- Add more filter buttons as needed -->
+        </div>
+    </section>
+
+    <!--==================== BLOG ====================-->
+    <section class="blog section" id="blog">
+        <h2 class="section__title">Blog</h2>
+        <span class="section__subtitle">My Technical Articles </span>
+
+        <div class="blog__container container grid">
+
+                <!--==================== BLOG 1====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog9.jpeg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">5 Minute Paper Explanations: Food AI Part I</h3>
+                        <p class="blog__description">Intuitive deep dive of the im2recipe paper “Learning
+                            Cross-modal Embeddings for Cooking Recipes and Food Images”</p>
+
+                        <a href="https://towardsdatascience.com/5-minute-paper-explanations-food-ai-part-i-9276b61873c1"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!--==================== BLOG 2====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog10.jpeg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">5-Minute Paper Explanations: Food AI Part II</h3>
+                        <p class="blog__description">Intuitive deep dive of im2recipe related paper “Dividing and
+                            Conquering Cross-Modal Recipe Retrieval: from Nearest Neighbours Baselines to SoTA”</p>
+
+                        <a href="https://towardsdatascience.com/5-minute-paper-explanations-food-ai-part-ii-c085b2789bd1"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!--==================== BLOG 3====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog11.jpeg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">5-Minute Paper Explanations: Food AI Part III</h3>
+                        <p class="blog__description">Intuitive deep dive of im2recipe related paper “Cross-Modal
+                            Retrieval and Synthesis (X-MRS): Closing the Modality Gap in Shared Representation
+                            Learning”</p>
+
+                        <a href="https://towardsdatascience.com/5-minute-paper-explanations-food-ai-part-iii-bd7256473c4d"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!--==================== BLOG 4====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog12.jpeg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">5-Minute Paper Explanations: Food AI Part IV</h3>
+                        <p class="blog__description">Intuitive deep dive of im2recipe related paper “Transformer
+                            Decoders with Multimodal Regularization for Cross-Modal Food Retrieval”</p>
+
+                        <a href="https://towardsdatascience.com/5-minute-paper-explanations-food-ai-part-iv-902e5131fd8d"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 5====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog8.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">Why Gradient Descent Works?</h3>
+                        <p class="blog__description">Everybody knows what Gradient Descent is and how it works. Ever
+                            wondered why it works? Here’s a mathematical explanation</p>
+
+                        <a href="https://towardsdatascience.com/why-gradient-descent-works-4e487d3c84c1"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 6====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog7.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">A Philosophical Look at Climate Change</h3>
+                        <p class="blog__description">… And why its here to stay</p>
+
+                        <a href="https://medium.com/the-environmental-reporter/a-philosophical-look-at-climate-change-5f5a2922f761"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 7====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog6.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">10 Points to Make it Big in the Data Industry</h3>
+                        <p class="blog__description">People want to make careers here. But they are often deafened
+                            by the noise that surrounds them.</p>
+
+                        <a href="https://towardsdatascience.com/10-points-to-make-it-big-in-the-data-industry-db62dfdcd9f2"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 8====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog5.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">What Mainstream AI is (Not) Doing</h3>
+                        <p class="blog__description">The pandemic accelerated AI adoption — and made Big Tech richer
+                            — but did AI adoption happen in the places
+                            where it was needed?</p>
+
+                        <a href="https://towardsdatascience.com/what-mainstream-ai-is-not-doing-9a2f7236a4f7"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 9====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog4.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">Introduction to PySpark via AWS EMR and Hands-on EDA</h3>
+                        <p class="blog__description">Performing EDA on NY Taxi Fare Dataset to see PySpark in action
+                            — because cloud computing is the next big thing!</p>
+
+                        <a href="https://pub.towardsai.net/introduction-to-pyspark-via-aws-emr-and-hands-on-eda-de1866d641f5"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 10====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog3.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">Fantasy Premier League x Data Analysis: Being Among the Top 2%</h3>
+                        <p class="blog__description">A brief overview of the application I built, in which I have
+                            employed data analysis to power my FPL team up the charts</p>
+
+                        <a href="https://towardsdatascience.com/fantasy-premier-league-x-data-analysis-being-among-the-top-2-98a714a1d170"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 11 ====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog2.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">Kernel Regression from Scratch in Python</h3>
+                        <p class="blog__description">Everyone knows Linear Regression, but do you know Kernel
+                            Regression?</p>
+
+                        <a href="https://towardsdatascience.com/kernel-regression-from-scratch-in-python-ea0615b23918"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--==================== BLOG 12====================-->
+                <div class="blog__content">
+                    <img src="assets/img/Blog/blog1.jpg" alt="" class="blog__img">
+
+                    <div class="blog__data">
+                        <h3 class="blog__title">Intro to Machine Learning via the Abalone Age Prediction Problem
+                        </h3>
+                        <p class="blog__description">The best way to dive into ML is to see it in action. Here it
+                            is!</p>
+
+                        <a href="https://blog.usejournal.com/intro-to-machine-learning-via-the-abalone-age-prediction-problem-4e290a8b2ed3"
+                            class="button button--flex button--small portfolio__button">
+                            Read it!
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div> -->
+
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+        </div>
+    </section>
+    <script src="assets/js/filter.js"></script>
+</body>
+</html>

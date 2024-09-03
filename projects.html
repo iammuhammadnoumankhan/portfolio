@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .projects__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .projects__content {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .projects__content:hover {
+            transform: translateY(-10px);
+        }
+
+        .projects__img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects__title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .projects__description {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects__button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .projects__button:hover {
+            background-color: #0056b3;
+        }
+
+        .button__icon {
+            margin-left: 0.5rem;
+        }
+
+        .filter__container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -5rem;
+        }
+
+        .filter__button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter__button.active, .filter__button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!--==================== FILTER ====================-->
+    <section class="filter section">
+        <h2 class="section__title">Filter Blogs</h2>
+        <div class="filter__container">
+            <button class="filter__button active" data-filter="all">All</button>
+            <button class="filter__button" data-filter="AI">AI</button>
+            <button class="filter__button" data-filter="CV">Computer Vision</button>
+            <button class="filter__button" data-filter="NLP">NLP</button>
+            <button class="filter__button" data-filter="RAG">RAGs</button>
+            <button class="filter__button" data-filter="Agent">AI Agents</button>
+            <button class="filter__button" data-filter="Scraper">Scrapers</button>
+            
+            <!-- Add more filter buttons as needed -->
+        </div>
+    </section>
+
+    <!--==================== PROJECTS ====================-->
+    <section class="projects section">
+        <h2 class="section__title">All Projects</h2>
+        <span class="section__subtitle">Explore My Work</span>
+
+        <div class="projects__container container grid">
+            <!-- Project 1 -->
+            <div class="projects__content" data-category="AI">
+                <img src="assets/img/Portfolio/portfolio8.jpg" alt="" class="projects__img">
+                <h3 class="projects__title">Food AI</h3>
+                <p class="projects__description">Cross-Modal Representation Learning</p>
+                <a href="project-detail.html" class="button button--flex button--small projects__button">
+                    View Details
+                    <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="projects__content" data-category="CV">
+                <img src="assets/img/Portfolio/portfolio4.JPG" alt="" class="projects__img">
+                <h3 class="projects__title">Reminder - Todo List</h3>
+                <p class="projects__description">Android Development</p>
+                <a href="project-detail.html" class="button button--flex button--small projects__button">
+                    View Details
+                    <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <script src="assets/js/filter.js"></script>
+</body>
+</html>
